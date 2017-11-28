@@ -45,9 +45,9 @@ extension UIView {
 
 enum CustomFont: String {
 
-    case ProximaNovaLight = "ProximaNova-Regular"
+    case ProximaNovaRegular = "ProximaNova-Regular"
     case ProximaNovaThin = "ProximaNovaT-Thin"
-    case ProximaNovaRegular = "ProximaNova-Light"
+    case ProximaNovaLight = "ProximaNova-Light"
     case ProximaNovaSemibold = "ProximaNova-Semibold"
 }
 

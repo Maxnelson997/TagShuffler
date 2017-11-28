@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/maxnelson/Desktop/CleanSwift/ThemeGod/ThemeGod/Proxima Nova Light.otf">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/maxnelson/Desktop/CleanSwift/ThemeGod/ThemeGod/Proxima Nova Regular.otf">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/maxnelson/Desktop/CleanSwift/ThemeGod/ThemeGod/Proxima Nova Semibold.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/maxnelson/Desktop/CleanSwift/ThemeGod/ThemeGod/Proxima Nova Thin.ttf">
+   </FileRef>
+   <FileRef
       location = "self:ThemeGod.xcodeproj">
    </FileRef>
 </Workspace>
