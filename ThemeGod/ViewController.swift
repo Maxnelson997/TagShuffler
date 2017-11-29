@@ -10,7 +10,6 @@ import UIKit
 
 class MNTextView:UIStackView {
     
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         phaseTwo()
@@ -26,6 +25,15 @@ class MNTextView:UIStackView {
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    var delegate:UITextViewDelegate {
+        get {
+            return textView.delegate!
+        }
+        set {
+            textView.delegate = newValue
+        }
     }
     
     var text:String {
@@ -49,7 +57,7 @@ class MNTextView:UIStackView {
     var textView:UITextView = {
         let t = UITextView()
         t.layer.cornerRadius = 12
-        t.backgroundColor = .darkGray
+        t.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         t.textColor = .white
         t.translatesAutoresizingMaskIntoConstraints = false
         t.font = UIFont.init(customFont: .ProximaNovaSemibold, withSize: 15)
@@ -100,6 +108,27 @@ class Logic {
     }
 }
 
+
+extension ViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        current = textView
+        var distance:CGFloat = 0
+        if textView == newBotTagsView.textView {
+            distance = 200
+        }
+        if textView == newTagsView.textView {
+            distance = 100
+        }
+        view.animateView(direction: .up, distance: distance)
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        view.animateView(direction: .down, distance: 0)
+    }
+    @objc func dis() {
+        current.resignFirstResponder()
+    }
+}
+
 class ViewController: UIViewController {
     
     var stack:UIStackView = {
@@ -109,6 +138,8 @@ class ViewController: UIViewController {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
+    
+    var current:UITextView!
     
     var tagsView = MNTextView(title: "all your possible tags", text: "#its #freaking #lit #fam")
     
@@ -147,6 +178,8 @@ class ViewController: UIViewController {
     
     func ui() {
         
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dis)))
+        
         view.backgroundColor = UIColor.white
         view.addSubview(stack)
         stack.addArrangedSubview(label)
@@ -154,6 +187,10 @@ class ViewController: UIViewController {
         stack.addArrangedSubview(newTagsView)
         stack.addArrangedSubview(newBotTagsView)
         stack.addArrangedSubview(shuffleButton)
+        
+        tagsView.delegate = self
+        newTagsView.delegate = self
+        newBotTagsView.delegate = self
  
         shuffleButton.addTarget(self, action: #selector(self.shuffle), for: .touchUpInside)
         
@@ -162,8 +199,8 @@ class ViewController: UIViewController {
             tagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.3),
             newTagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.25),
             newBotTagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.25),
-//            shuffleButton.heightAnchor.constraint(equalToConstant: 60),
-            shuffleButton.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.1)
+            shuffleButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 60),
+//            shuffleButton.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.1)
 
             ])
         
