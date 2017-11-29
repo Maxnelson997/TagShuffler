@@ -8,6 +8,74 @@
 
 import UIKit
 
+class MNTextView:UIStackView {
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        phaseTwo()
+    }
+    
+    init(title:String = "title", text:String = "textview text") {
+        super.init(frame: .zero)
+        self.text = text
+        self.title = title
+        self.translatesAutoresizingMaskIntoConstraints = false
+        phaseTwo()
+    }
+    
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    var text:String {
+        get {
+            return textView.text
+        }
+        set {
+            textView.text = newValue
+        }
+    }
+    
+    var title:String {
+        get {
+            return label.text!
+        }
+        set {
+            label.text = newValue.lowercased()
+        }
+    }
+    
+    var textView:UITextView = {
+        let t = UITextView()
+        t.layer.cornerRadius = 12
+        t.backgroundColor = .darkGray
+        t.textColor = .white
+        t.translatesAutoresizingMaskIntoConstraints = false
+        t.font = UIFont.init(customFont: .ProximaNovaSemibold, withSize: 15)
+        return t
+    }()
+    
+    var label:UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.init(customFont: .ProximaNovaRegular, withSize: 20)
+        return label
+    }()
+    
+    func phaseTwo() {
+        axis = .vertical
+        addArrangedSubview(label)
+        addArrangedSubview(textView)
+        NSLayoutConstraint.activate([
+            label.heightAnchor.constraint(equalToConstant: 20),
+            textView.heightAnchor.constraint(equalTo: self.heightAnchor, constant: -40)
+            ])
+    }
+    
+}
+
 class Logic {
     static func randomize(_ arr:[String], limit: Int) -> [String] {
         var r:[String] = []
@@ -19,9 +87,11 @@ class Logic {
                 let randIndex = Int(arc4random_uniform(UInt32(arr.count)))
                 if !usedIndexes.contains(randIndex) {
                     let str = arr[randIndex]
-                    usedIndexes.append(randIndex)
-                    r.append(str)
-                    strPlaced = true
+                    if str != "" {
+                        usedIndexes.append(randIndex)
+                        r.append(str)
+                        strPlaced = true
+                    }
                 }
             }
             remaining -= 1
@@ -40,25 +110,11 @@ class ViewController: UIViewController {
         return stack
     }()
     
-    var tagsView:UITextView = {
-        let t = UITextView()
-        t.layer.cornerRadius = 12
-        t.backgroundColor = .darkGray
-        t.textColor = .white
-        t.translatesAutoresizingMaskIntoConstraints = false
-        t.font = UIFont.init(customFont: .ProximaNovaSemibold, withSize: 15)
-        return t
-    }()
+    var tagsView = MNTextView(title: "all your possible tags", text: "#its #freaking #lit #fam")
     
-    var newTagsView:UITextView = {
-        let t = UITextView()
-        t.layer.cornerRadius = 12
-        t.backgroundColor = .darkGray
-        t.textColor = .white
-        t.font = UIFont.init(customFont: .ProximaNovaSemibold, withSize: 15)
-        t.translatesAutoresizingMaskIntoConstraints = false
-        return t
-    }()
+    var newTagsView = MNTextView(title: "post tags", text: "your post tags appear here")
+    
+    var newBotTagsView = MNTextView(title: "bot tags", text: "your bot tags appear here")
     
     var shuffleButton:UIButton = {
         let b = UIButton()
@@ -74,16 +130,14 @@ class ViewController: UIViewController {
     var label:UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        label.text = "Tag Shuffler 1.0 \nson"
-        label.font = UIFont.init(customFont: .ProximaNovaSemibold, withSize: 40)
+        label.text = "Tag Shuffler 1.0 son"
+        label.font = UIFont.init(customFont: .ProximaNovaSemibold, withSize: 30)
         return label
     }()
     
-    var tags = ["#code", "#coder", "#swiftlang", "#ios", "#iosdeveloper", "#developer", "#programmer", "#programming", "#webdeveloper", "#siliconslopes", "#siliconvalley", "#process", "#habit", "#android", "#java", "#csharp", "#django", "#python #javascript", "#css", "#html", "#web", "#software", "#startup", "#wwdc", "#apple", "#clean", "#minimalistic", "#minimal", "#simple", "#simplicity", "#airpods", "#ikea", "#modern", "#teamapple", "#photography", "#mobilemag", "#visualsoflife", "#utah", "#saltlakecity", "#newyorkcity", "#sanfransisco", "#moodygrams", "#fatalframes", "#worldcode", "#sony", "#bootcamp", "#frontend", "#bootstrap", "#sass", "#inspiration", "#design", "#webdesign", "#workspace", "#digital", "#setup", "#inspiration", "#sublime", "#work", "#hustle", "#grind", "#html5", "#isetups", "#computerscience", "#computer", "#macbookpro", "#mac", "#macbookair", "#website", "#designer", "#illustrator", "#mkbhd", "#freelance", "#quotes", "#motivation", "#codegoals"
-    ]
+    var tags = ["#code", "#coder", "#swiftlang", "#ios", "#iosdeveloper", "#developer", "#programmer", "#programming", "#webdeveloper", "#siliconslopes", "#siliconvalley", "#process", "#habit", "#android", "#java", "#csharp", "#django", "#python #javascript", "#css", "#html", "#web", "#software", "#startup", "#wwdc", "#apple", "#clean", "#minimalistic", "#minimal", "#simple", "#simplicity", "#airpods", "#ikea", "#modern", "#teamapple", "#photography", "#mobilemag", "#visualsoflife", "#utah", "#saltlakecity", "#newyorkcity", "#sanfransisco", "#moodygrams", "#fatalframes", "#worldcode", "#sony", "#bootcamp", "#frontend", "#bootstrap", "#sass", "#inspiration", "#design", "#webdesign", "#workspace", "#digital", "#setup", "#inspiration", "#sublime", "#work", "#hustle", "#grind", "#html5", "#isetups", "#computerscience", "#computer", "#macbookpro", "#mac", "#macbookair", "#website", "#designer", "#illustrator", "#mkbhd", "#freelance", "#quotes", "#motivation", "#codegoals"]
     
     //        var tags0 = ["hi","max"]
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,15 +152,18 @@ class ViewController: UIViewController {
         stack.addArrangedSubview(label)
         stack.addArrangedSubview(tagsView)
         stack.addArrangedSubview(newTagsView)
+        stack.addArrangedSubview(newBotTagsView)
         stack.addArrangedSubview(shuffleButton)
  
         shuffleButton.addTarget(self, action: #selector(self.shuffle), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            label.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.2),
-            tagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.35),
-            newTagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.35),
-            shuffleButton.heightAnchor.constraint(equalToConstant: 60),
+            label.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.1),
+            tagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.3),
+            newTagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.25),
+            newBotTagsView.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.25),
+//            shuffleButton.heightAnchor.constraint(equalToConstant: 60),
+            shuffleButton.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.1)
 
             ])
         
@@ -120,6 +177,20 @@ class ViewController: UIViewController {
         tags = textToTags(tagsView.text)
         let shuffled = Logic.randomize(tags, limit: 30)
         newTagsView.text = tagsToText(shuffled)
+        newBotTagsView.text = tagsToArrayString(shuffled)
+    }
+    
+    func tagsToArrayString(_ arr:[String]) -> String {
+        var tagsWithCommas:String = ""
+        for tag in arr {
+            let index = tag.index(tag.startIndex, offsetBy: 1)
+            tagsWithCommas += String(tag[index...])
+            if arr.index(of: tag) != (arr.count-1) {
+                tagsWithCommas += ", "
+            }
+        }
+        let template = "tags = [\(tagsWithCommas)]"
+        return template
     }
     
     func textToTags(_ text:String) -> [String] {
@@ -133,7 +204,6 @@ class ViewController: UIViewController {
         }
         return newString
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
