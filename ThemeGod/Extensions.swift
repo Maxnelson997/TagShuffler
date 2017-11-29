@@ -36,8 +36,12 @@ enum Direction:CGFloat {
     case back = 0
 }
 extension UIView {
-    func animateView(direction:Direction, distance:CGFloat) {
-        UIView.animate(withDuration: 0.3) {
+    func animateView(direction:Direction, distance:CGFloat, withAnimation:Bool = true) {
+        if withAnimation {
+            UIView.animate(withDuration: 0.3) {
+                self.transform = CGAffineTransform(translationX: 0, y: distance * direction.rawValue)
+            }
+        } else{
             self.transform = CGAffineTransform(translationX: 0, y: distance * direction.rawValue)
         }
     }
@@ -79,20 +83,24 @@ extension String {
         self = self.capitalizingFirstLetter()
     }
 }
+
+extension UIView {
+    func addDropShadowToView(){
+        self.layer.masksToBounds =  false
+        self.layer.shadowColor = UIColor.gray.withAlphaComponent(0.9).cgColor
+        self.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        self.layer.shadowOpacity = 0.6
+        self.layer.shadowRadius = 5
+    }
+}
+
 extension UIColor {
     
-    open class var DBackground: UIColor { return UIColor.init(rgb: 0xB5DFFF) }
-    open class var DBarBlack: UIColor { return UIColor.init(rgb: 0x232323) }
-    open class var MNDarkGray: UIColor { return UIColor.init(rgb: 0x1C1D1D) } //0x232323 //0x1D1D1D
-    open class var MNGray: UIColor { return UIColor.init(rgb:  0x292A2A) } //0x525252 //0x383939
-    open class var MNOriginalDarkGray: UIColor { return UIColor.init(rgb: 0x232323) }
-    open class var MNGreen1: UIColor { return UIColor.init(rgb: 0x5CFF90) }
-    open class var MNGreen: UIColor { return UIColor.init(rgb: 0x50C6FF) }
-    open class var MNBlue: UIColor { return UIColor.init(rgb: 0x7ECDFD) }
-    open class var MNTextGray: UIColor { return UIColor.init(rgb: 0xFEFDFE) }
-    open class var MNMagenta: UIColor { return UIColor.init(rgb: 0xEC34FF) }
-    open class var MNRed:UIColor { return UIColor.init(rgb: 0xF40A0D) }
-    open class var MNTextGrayNew:UIColor { return UIColor.init(rgb: 0x454B4E) } 
+    open class var appleBlue: UIColor { return UIColor.init(red: 14, green: 122, blue: 254) }
+    open class var textbg: UIColor { return UIColor.init(rgb: 0xE4FBFF)}
+    open class var darkPurp: UIColor { return UIColor.init(rgb: 0x3023AE)}
+    open class var lightPink: UIColor { return UIColor.init(rgb: 0xC86DD7)}
+    open class var grayDient: UIColor { return UIColor.init(rgb: 0xCDCDCD )}
     
     
     convenience init(red: Int, green: Int, blue: Int) {

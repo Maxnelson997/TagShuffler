@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BE02C7C8D5B396CC73976A4 /* Pods_ThemeGodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0963012EF4EFA0C9140D7409 /* Pods_ThemeGodUITests.framework */; };
 		7970235A1FCE0E1900589706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797023591FCE0E1900589706 /* AppDelegate.swift */; };
 		7970235C1FCE0E1900589706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970235B1FCE0E1900589706 /* ViewController.swift */; };
 		797023621FCE0E1900589706 /* ThemeGod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 797023601FCE0E1900589706 /* ThemeGod.xcdatamodeld */; };
@@ -19,6 +20,8 @@
 		7970239F1FCE17D800589706 /* Proxima Nova Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7970239B1FCE17B800589706 /* Proxima Nova Thin.ttf */; };
 		797023A01FCE17D800589706 /* Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7970239C1FCE17B800589706 /* Proxima Nova Regular.otf */; };
 		797023A11FCE17D800589706 /* Proxima Nova Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7970239D1FCE17B800589706 /* Proxima Nova Semibold.ttf */; };
+		9D55A0A7CA3A33E5972246B2 /* Pods_ThemeGod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C3B48501EAC7ECF2F67E81 /* Pods_ThemeGod.framework */; };
+		A33E68E5678FC1D9F972E8D7 /* Pods_ThemeGodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84041DF672DBB42F5EED14E1 /* Pods_ThemeGodTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0963012EF4EFA0C9140D7409 /* Pods_ThemeGodUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThemeGodUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D3E81BB74F134785588E2A8 /* Pods-ThemeGod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemeGod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThemeGod/Pods-ThemeGod.debug.xcconfig"; sourceTree = "<group>"; };
+		4FFD20CF1C53C2560A9EE2A5 /* Pods-ThemeGodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemeGodUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThemeGodUITests/Pods-ThemeGodUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BA79250911856BF7883B052 /* Pods-ThemeGodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemeGodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThemeGodTests/Pods-ThemeGodTests.release.xcconfig"; sourceTree = "<group>"; };
 		797023561FCE0E1900589706 /* ThemeGod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThemeGod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797023591FCE0E1900589706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7970235B1FCE0E1900589706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +64,11 @@
 		7970239B1FCE17B800589706 /* Proxima Nova Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Thin.ttf"; sourceTree = "<group>"; };
 		7970239C1FCE17B800589706 /* Proxima Nova Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Regular.otf"; sourceTree = "<group>"; };
 		7970239D1FCE17B800589706 /* Proxima Nova Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Semibold.ttf"; sourceTree = "<group>"; };
+		84041DF672DBB42F5EED14E1 /* Pods_ThemeGodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThemeGodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8DCC106CE6AD6CECD7F1B9 /* Pods-ThemeGodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemeGodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThemeGodTests/Pods-ThemeGodTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C41AE087C2E3A5375A82CB3E /* Pods-ThemeGod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemeGod.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThemeGod/Pods-ThemeGod.release.xcconfig"; sourceTree = "<group>"; };
+		E3C3B48501EAC7ECF2F67E81 /* Pods_ThemeGod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThemeGod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC5F8A2730CF72FD40E723C /* Pods-ThemeGodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemeGodUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThemeGodUITests/Pods-ThemeGodUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D55A0A7CA3A33E5972246B2 /* Pods_ThemeGod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33E68E5678FC1D9F972E8D7 /* Pods_ThemeGodTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE02C7C8D5B396CC73976A4 /* Pods_ThemeGodUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5025CA4CCCA911736FEDFD75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3B48501EAC7ECF2F67E81 /* Pods_ThemeGod.framework */,
+				84041DF672DBB42F5EED14E1 /* Pods_ThemeGodTests.framework */,
+				0963012EF4EFA0C9140D7409 /* Pods_ThemeGodUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7970234D1FCE0E1900589706 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +116,8 @@
 				797023701FCE0E1900589706 /* ThemeGodTests */,
 				7970237B1FCE0E1900589706 /* ThemeGodUITests */,
 				797023571FCE0E1900589706 /* Products */,
+				B232D45A539349CB208E205C /* Pods */,
+				5025CA4CCCA911736FEDFD75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +175,19 @@
 			path = Proxima_Nova;
 			sourceTree = "<group>";
 		};
+		B232D45A539349CB208E205C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D3E81BB74F134785588E2A8 /* Pods-ThemeGod.debug.xcconfig */,
+				C41AE087C2E3A5375A82CB3E /* Pods-ThemeGod.release.xcconfig */,
+				BE8DCC106CE6AD6CECD7F1B9 /* Pods-ThemeGodTests.debug.xcconfig */,
+				6BA79250911856BF7883B052 /* Pods-ThemeGodTests.release.xcconfig */,
+				4FFD20CF1C53C2560A9EE2A5 /* Pods-ThemeGodUITests.debug.xcconfig */,
+				FDC5F8A2730CF72FD40E723C /* Pods-ThemeGodUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797023811FCE0E1900589706 /* Build configuration list for PBXNativeTarget "ThemeGod" */;
 			buildPhases = (
+				39FF65481F1FEF9E072AAA50 /* [CP] Check Pods Manifest.lock */,
 				797023521FCE0E1900589706 /* Sources */,
 				797023531FCE0E1900589706 /* Frameworks */,
 				797023541FCE0E1900589706 /* Resources */,
+				268578BE3E78160467D41CCD /* [CP] Embed Pods Frameworks */,
+				B215E3790044D7D32528938B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797023841FCE0E1900589706 /* Build configuration list for PBXNativeTarget "ThemeGodTests" */;
 			buildPhases = (
+				EEAEBE7855F60E7673EB2E95 /* [CP] Check Pods Manifest.lock */,
 				797023691FCE0E1900589706 /* Sources */,
 				7970236A1FCE0E1900589706 /* Frameworks */,
 				7970236B1FCE0E1900589706 /* Resources */,
+				69B052E1F589C0DB678192E5 /* [CP] Embed Pods Frameworks */,
+				5FA258167CE73EA6F8983690 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797023871FCE0E1900589706 /* Build configuration list for PBXNativeTarget "ThemeGodUITests" */;
 			buildPhases = (
+				69FDFD7529802C2BA65AE6A7 /* [CP] Check Pods Manifest.lock */,
 				797023741FCE0E1900589706 /* Sources */,
 				797023751FCE0E1900589706 /* Frameworks */,
 				797023761FCE0E1900589706 /* Resources */,
+				06D0CB957418EE778A08D8BE /* [CP] Embed Pods Frameworks */,
+				70A41374AC7C4E90E2274BAF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +328,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06D0CB957418EE778A08D8BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThemeGodUITests/Pods-ThemeGodUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		268578BE3E78160467D41CCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThemeGod/Pods-ThemeGod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39FF65481F1FEF9E072AAA50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA258167CE73EA6F8983690 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThemeGodTests/Pods-ThemeGodTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69B052E1F589C0DB678192E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThemeGodTests/Pods-ThemeGodTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69FDFD7529802C2BA65AE6A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		70A41374AC7C4E90E2274BAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThemeGodUITests/Pods-ThemeGodUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B215E3790044D7D32528938B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThemeGod/Pods-ThemeGod-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEAEBE7855F60E7673EB2E95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		797023521FCE0E1900589706 /* Sources */ = {
@@ -444,6 +631,7 @@
 		};
 		797023821FCE0E1900589706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D3E81BB74F134785588E2A8 /* Pods-ThemeGod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +647,7 @@
 		};
 		797023831FCE0E1900589706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C41AE087C2E3A5375A82CB3E /* Pods-ThemeGod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,6 +663,7 @@
 		};
 		797023851FCE0E1900589706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE8DCC106CE6AD6CECD7F1B9 /* Pods-ThemeGodTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +681,7 @@
 		};
 		797023861FCE0E1900589706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BA79250911856BF7883B052 /* Pods-ThemeGodTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +699,7 @@
 		};
 		797023881FCE0E1900589706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFD20CF1C53C2560A9EE2A5 /* Pods-ThemeGodUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +716,7 @@
 		};
 		797023891FCE0E1900589706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC5F8A2730CF72FD40E723C /* Pods-ThemeGodUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
