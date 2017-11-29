@@ -57,7 +57,7 @@ class MNTextView:UIStackView {
     var textView:UITextView = {
         let t = UITextView()
         t.layer.cornerRadius = 12
-        t.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        t.backgroundColor = UIColor.gray.withAlphaComponent(0.65)
         t.textColor = .white
         t.translatesAutoresizingMaskIntoConstraints = false
         t.font = UIFont.init(customFont: .ProximaNovaSemibold, withSize: 15)
